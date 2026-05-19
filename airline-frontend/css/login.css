@@ -1,0 +1,287 @@
+/* ================= CONFIGURACIÓN DE PÁGINA AUTENTICACIÓN ================= */
+.auth-page {
+    background: #FFFFFF !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ================= COMPONENTE LOGO SUPERIOR CIRCULAR ================= */
+.auth-logo-top {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-circle {
+    background: #FFFFFF;
+    width: 150px;          /* Tamaño del círculo */
+    height: 150px;         
+    border-radius: 50%;    /* Círculo perfecto */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E7EB;
+    overflow: hidden;      /* Corta todo lo que se salga por el zoom */
+}
+
+.logo-circle img {
+    width: 100%;           
+    height: 100%;          
+    object-fit: contain;   /* Mantiene la proporción original */
+    transform: scale(1.3); /* Zoom máximo para que quede cabal */
+    transform-origin: center;
+}
+
+/* Título de la sección */
+.auth-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 1.25rem;
+    color: #4A4A4A;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ================= TARJETA GRIS DEL FORMULARIO ================= */
+.auth-card {
+    background: #E2E2E2; /* Color gris plano de la tarjeta */
+    border-radius: 16px;
+    padding: 35px 40px;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(255,255,255,0.5), 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-text {
+    font-size: 0.75rem;
+    color: #666666;
+}
+
+/* Inputs con Iconos Incorporados */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666666;
+    font-size: 1.1rem;
+}
+
+/* Inputs limpios */
+.form-group input {
+    width: 100%;
+    padding: 14px 16px; /* Padding por defecto para campos de crear cuenta */
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #FFFFFF;
+    color: #222222;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+    transition: border-color 0.2s;
+}
+
+/* Si el input tiene ícono izquierdo (como en el Login) añade espacio extra */
+.input-wrapper .input-icon + input {
+    padding-left: 45px;
+}
+
+.form-group input:focus {
+    border-color: #0073C6;
+}
+
+/* Botón Ocultar / Mostrar Contraseña */
+.toggle-pw {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555555;
+    font-size: 1.1rem;
+}
+
+/* Textos de Validación y Errores */
+.field-error {
+    display: block;
+    color: #B91C1C;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    min-height: 15px;
+}
+
+.global-error {
+    background: #FEE2E2;
+    border: 1px solid #FCA5A5;
+    color: #991B1B;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.global-success {
+    background: #F0FDF4;
+    border: 1px solid #BBF7D0;
+    color: #16A34A;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.required-note {
+    font-size: 0.85rem;
+    color: #A31D1D; /* Rojo oscuro exacto */
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* ================= ESTILOS DE BOTONES PLANOS ================= */
+.btn-flat-blue {
+    display: block;
+    width: 100%;
+    background: #0073C6; /* Azul de Iniciar Sesión / Crear Cuenta */
+    color: #FFFFFF;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-flat-blue:hover { background: #0062A8; }
+.btn-flat-blue:disabled { background: #94A3B8; cursor: not-allowed; }
+
+.btn-flat-darkblue {
+    display: block;
+    width: 100%;
+    background: #004D7C; /* Azul oscuro para Cancelar */
+    color: #FFFFFF;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+.btn-flat-darkblue:hover { background: #003F6A; }
+
+/* Divisor de Cuenta inferior */
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0 15px 0;
+    color: #444444;
+    font-size: 0.85rem;
+}
+
+.auth-divider::before, .auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #444444;
+}
+
+.auth-divider span {
+    padding: 0 10px;
+}
+
+/* Botón Gris Pequeño Centrado (Crear cuenta en login) */
+.center-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-flat-gray {
+    display: inline-block;
+    background: #C5C5C5; /* Gris del botón inferior */
+    color: #222222;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-flat-gray:hover { background: #B5B5B5; }
+
+.btn-full {
+    width: 100%;
+}
+
+/* ================= FOOTER DE LOGIN / REGISTER ================= */
+.auth-footer {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.auth-footer p {
+    font-size: 0.85rem;
+    color: #555555;
+    font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Responsivo para celulares */
+@media(max-width: 480px) {
+    .auth-card {
+        padding: 25px 20px;
+    }
+}
