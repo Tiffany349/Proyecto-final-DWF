@@ -1,1 +1,0 @@
-// La lógica de autenticación está en api.js
