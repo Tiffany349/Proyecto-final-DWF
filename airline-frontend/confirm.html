@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Vuelo – Infiniti Sky</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<header class="confirm-header">
+    <div class="logo-central">
+        <img src="assets/images/logo.png" alt="logo" class="logo-main-img">
+    </div>
+    <h1 class="main-page-title">Confirmación de vuelo</h1>
+</header>
+
+<main class="confirm-main-container">
+    <div class="glass-confirm-card">
+        
+        <form id="reservation-form" novalidate>
+            <input type="hidden" id="hidden-flight-id">
+
+            <div class="section-block">
+                <h3 class="block-title">Campos a completar</h3>
+                
+                <div class="form-grid">
+                    <div class="form-group-custom">
+                        <label>* Nombres de pasajero:</label>
+                        <div class="input-container">
+                            <input type="text" id="firstName">
+                            <span class="field-error" id="err-firstName"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>* Apellidos de pasajero:</label>
+                        <div class="input-container">
+                            <input type="text" id="lastName">
+                            <span class="field-error" id="err-lastName"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>* Fecha de Nacimiento</label>
+                        <div class="input-container">
+                            <input type="date" id="dob">
+                            <span class="field-error" id="err-dob"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>* Número de Pasaporte</label>
+                        <div class="input-container">
+                            <input type="text" id="passport">
+                            <span class="field-error" id="err-passport"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>* Clase de vuelo:</label>
+                        <div class="input-container select-wrapper">
+                            <select id="seat">
+                                <option value="Económica">Económica</option>
+                                <option value="Business">Business</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Ultra Premium">Ultra Premium</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="required-note">Campos obligatorios o necesarios *</p>
+            </div>
+
+            <div class="section-block separator-top">
+                <h3 class="block-title">Detalles del vuelo</h3>
+                
+                <div class="flight-details-layout">
+                    <div class="flight-info-text-block" id="flight-details">
+                        <div class="loading-msg"><i class="fa-solid fa-spinner fa-spin"></i> Cargando detalles del vuelo...</div>
+                    </div>
+
+                    <div class="flight-actions-block">
+                        <div id="global-error" class="global-error" style="display:none"></div>
+                        <div id="success-msg" class="global-success" style="display:none"></div>
+
+                        <button type="submit" class="btn-confirm-action btn-blue-pay">
+                            Confirmar y pagar ahora
+                        </button>
+                        
+                        <button type="button" class="btn-confirm-action btn-dark-save" id="btn-add-trips">
+                            Agregar a Mis Viajes
+                        </button>
+                        
+                        <a href="index.html" class="btn-confirm-action btn-gray-cancel">
+                            Cancelar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</main>
+
+<footer class="footer-bottom-text">
+    <p>©2026 Marca registrada Infinite Sky</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/flights.js"></script>
+</body>
+</html>

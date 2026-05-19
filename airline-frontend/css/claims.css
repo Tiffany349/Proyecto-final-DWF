@@ -1,0 +1,93 @@
+textarea {
+    width: 100%;
+    min-height: 140px;
+    padding: 14px;
+    border-radius: 14px;
+    margin: 14px 0;
+    border: 1px solid rgba(255,255,255,0.2);
+    resize: vertical;
+    font-family: inherit;
+    font-size: 15px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #4da6ff;
+    box-shadow: 0 0 10px rgba(77,166,255,0.4);
+}
+
+#claims-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#claim-msg {
+    margin: 18px 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.claim-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.claim-buttons .btn-confirm-action {
+    min-width: 220px;
+    text-align: center;
+}
+
+#load-claims {
+    margin-top: 18px;
+    width: 100%;
+}
+
+.trip-card-custom {
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.trip-card-custom h4 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #6cb4ff;
+}
+
+.trip-card-custom p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+input,
+select {
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .claim-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .claim-buttons .btn-confirm-action {
+        width: 100%;
+    }
+}

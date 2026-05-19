@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil – Infiniti Sky</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<header class="confirm-header">
+    <div class="logo-central">
+        <img src="assets/images/logo.png" alt="logo" class="logo-main-img">
+    </div>
+</header>
+
+<main class="profile-page">
+
+    <section class="profile-box">
+
+        <div class="profile-icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <h2>Mi Perfil</h2>
+
+        <form id="profile-form">
+
+            <label>Nombre completo</label>
+            <input type="text" id="fullname">
+
+            <label>Correo electrónico</label>
+            <input type="email" id="email">
+
+            <label>Rol</label>
+            <input type="text" id="role" readonly>
+
+            <div id="profile-msg"></div>
+
+            <div class="profile-actions">
+                <button type="submit">Guardar</button>
+                <a href="index.html">Volver</a>
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer class="footer-bottom-text">
+    <p>©2026 Marca registrada Infiniti Sky</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+</html>

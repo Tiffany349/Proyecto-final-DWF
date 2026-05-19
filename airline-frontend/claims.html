@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamos – Infiniti Sky</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confirmation.css">
+    <link rel="stylesheet" href="css/claims.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+<header class="confirm-header">
+    <div class="logo-central">
+        <img src="assets/images/logo.png" alt="logo" class="logo-main-img">
+    </div>
+    <h1 class="main-page-title">Centro de Reclamos</h1>
+</header>
+
+<main class="confirm-main-container">
+    <div class="glass-confirm-card">
+
+        <form id="claim-form">
+
+            <div class="section-block">
+                <h3 class="block-title">
+                    <i class="fa-regular fa-face-frown"></i>
+                    Registrar Reclamo
+                </h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group-custom">
+                        <label>Nombre completo</label>
+                        <input type="text" id="passengerName">
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>Correo</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>Tipo de reclamo</label>
+                        <select id="claimType">
+                            <option value="Equipaje">Equipaje</option>
+                            <option value="Retraso">Retraso</option>
+                            <option value="Cancelación">Cancelación</option>
+                            <option value="Atención al cliente">Atención al cliente</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>Número de vuelo</label>
+                        <input type="text" id="flightNumber">
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>Origen</label>
+                        <input type="text" id="origin">
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label>Destino</label>
+                        <input type="text" id="destination">
+                    </div>
+
+                </div>
+
+                <div class="form-group-custom">
+                    <label>Descripción del reclamo</label>
+                    <textarea id="description" placeholder="Describe detalladamente tu inconveniente..."></textarea>
+                </div>
+
+                <div id="claim-msg"></div>
+
+                <div class="claim-buttons">
+                    <button type="submit" class="btn-confirm-action btn-blue-pay">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Enviar Reclamo
+                    </button>
+
+                    <a href="index.html" class="btn-confirm-action btn-gray-cancel">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Volver
+                    </a>
+                </div>
+            </div>
+
+          
+        </form>
+
+    </div>
+</main>
+
+<footer class="footer-bottom-text">
+    <p>©2026 Marca registrada Infiniti Sky</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/claims.js"></script>
+
+</body>
+</html>
